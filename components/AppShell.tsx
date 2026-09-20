@@ -5,6 +5,7 @@ import { useState, type ReactNode } from 'react';
 
 import { DeadLink } from '@/components/DeadLink';
 import { IconClose, IconDiamond, IconMenu, IconMore, navIcons } from '@/components/Icons';
+import { assetPath } from '@/lib/assetPath';
 import { footerLinks, moreLinks, navItems, navPrimary, navSecondary } from '@/lib/content';
 
 const accentBtn =
@@ -130,7 +131,7 @@ function SiteHeader({
                     </DeadLink>
                     <DeadLink aria-label='ourdream.ai home' className='flex shrink-0 items-center'>
                         <Image
-                            src='/logos/logo.svg'
+                            src={assetPath('/logos/logo.svg')}
                             alt='ourdream.ai'
                             width={130}
                             height={15}

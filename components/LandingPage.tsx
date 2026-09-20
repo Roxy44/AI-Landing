@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 
+import { AppShell } from '@/components/AppShell';
 import { DeadLink } from '@/components/DeadLink';
 import { FaqAccordion } from '@/components/FaqAccordion';
 import { featureIcons, IconLink } from '@/components/Icons';
 import { InlineDeadLink } from '@/components/InlineDeadLink';
-import { AppShell } from '@/components/AppShell';
 import { SiteFooter } from '@/components/SiteFooter';
+import { assetPath } from '@/lib/assetPath';
 import {
     comparisons,
     heroFeatures,
@@ -88,7 +89,7 @@ export function LandingPage() {
                         <div className='mt-10 w-full'>
                             <DeadLink className='block overflow-hidden rounded-2xl transition hover:opacity-95' aria-label='AI Roleplay Generator showcase'>
                                 <Image
-                                    src='/images/hero.webp'
+                                    src={assetPath('/images/hero.webp')}
                                     alt='AI Roleplay Generator showcase'
                                     width={1372}
                                     height={500}
@@ -150,7 +151,7 @@ export function LandingPage() {
                                     aria-label='Ourdream AI roleplay generator interface'
                                 >
                                     <Image
-                                        src='/images/generate.webp'
+                                        src={assetPath('/images/generate.webp')}
                                         alt='Ourdream AI roleplay generator interface'
                                         width={968}
                                         height={1482}
@@ -522,7 +523,7 @@ export function LandingPage() {
                                     >
                                         <div className='flex items-center gap-3'>
                                             <Image
-                                                src={item.image}
+                                                src={assetPath(item.image)}
                                                 alt={item.alt}
                                                 width={40}
                                                 height={40}
